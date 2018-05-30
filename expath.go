@@ -1,6 +1,5 @@
 // Package expath extends the standard library path/filepath's Match and Glob routines
 // for supporting any-directories' pattern (** matches zero or more directories in a path).
-
 package expath
 
 import (

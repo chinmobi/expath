@@ -21,9 +21,8 @@ func (filePathHelper) getNames(dir string) ([]string, error) {
 	if err != nil {
 		if os.IsNotExist(err) {
 			return nil, nil
-		} else {
-			return nil, err
 		}
+		return nil, err
 	}
 
 	if !fi.IsDir() {
@@ -47,9 +46,8 @@ func (filePathHelper) isExist(dir string) (bool, error) {
 	if _, err := os.Lstat(dir); err != nil {
 		if os.IsNotExist(err) {
 			return false, nil
-		} else {
-			return false, err
 		}
+		return false, err
 	}
 
 	return true, nil

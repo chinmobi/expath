@@ -205,11 +205,10 @@ func normalGlob(dir, matchedPath, pattern string,
 
 		if morePattern {
 			return normalGlob(dir, matchedPath, tail, helper, matches)
-		} else {
-			err = matches.onMatched(matchedPath)
-			if err != nil {
-				return err
-			}
+		}
+		err = matches.onMatched(matchedPath)
+		if err != nil {
+			return err
 		}
 
 	} else {

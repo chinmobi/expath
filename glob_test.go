@@ -73,13 +73,13 @@ func wrapGlob(pattern, path string) (bool, error) {
 	for _, mp := range mh.matches {
 		if mp == path {
 			return true, nil
-		} else {
-			if trimPath(mp) == trimPath(path) {
-				return true, nil
-			}
-
-			return false, errors.New(mp)
 		}
+
+		if trimPath(mp) == trimPath(path) {
+			return true, nil
+		}
+
+		return false, errors.New(mp)
 	}
 
 	return false, nil

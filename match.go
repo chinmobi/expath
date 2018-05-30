@@ -11,9 +11,8 @@ import (
 func matchASeg(seg patternSeg, name string) (bool, error) {
 	if seg.dirs >= 0 {
 		return filepath.Match(seg.pattern, name)
-	} else {
-		return matchAnyDirs(seg.pattern, name)
 	}
+	return matchAnyDirs(seg.pattern, name)
 }
 
 func matchAnyDirs(pattern, name string) (matched bool, err error) {
@@ -125,9 +124,8 @@ func matchSegs(segs []patternSeg, name string) (matched bool, err error) {
 			if i >= segsLen {
 				if from >= nLen {
 					return true, nil
-				} else {
-					break
 				}
+				break
 			}
 
 			seg = segs[i]
