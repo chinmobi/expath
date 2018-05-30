@@ -1,6 +1,6 @@
 # go-expath
 
-[![Go Report Card](https://goreportcard.com/badge/github.com/chinmobi/expath)](https://goreportcard.com/report/github.com/chinmobi/expath)
+[![Build Status](https://travis-ci.org/chinmobi/expath.svg?branch=master)](https://travis-ci.org/chinmobi/expath)[![Go Report Card](https://goreportcard.com/badge/github.com/chinmobi/expath)](https://goreportcard.com/report/github.com/chinmobi/expath)
 
 The expath is a Go package that extends the Go standard library path/filepath's Match and Glob routines, especially supporting any-directories' pattern (** matches zero or more directories in a path).
 
